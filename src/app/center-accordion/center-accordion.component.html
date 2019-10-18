@@ -1,6 +1,6 @@
 <mat-accordion>
   <div *ngFor="let item of items">
-    <div *ngIf="item.active">
+    <div *ngIf="item.active || isInit">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>

@@ -13,6 +13,7 @@ import { FiltersComponent } from './filters/filters.component';
 import { DataService } from './services/data.service';
 
 import { Item } from './classes/item';
+import { CategoryObject } from './classes/category-object';
 import { FiltersService } from './services/filters.service';
 
 const material = [MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule

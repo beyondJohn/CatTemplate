@@ -11,6 +11,7 @@ import { FiltersService } from '../services/filters.service';
 export class CenterAccordionComponent implements OnInit {
   myJson: Array<Object>;
   items: Array<Item> = [];
+  isInit = true;
   constructor(
     private data: DataService
     , private _filterService: FiltersService
@@ -25,11 +26,10 @@ export class CenterAccordionComponent implements OnInit {
     });
     this._filterService.filterBehaviorSubject.subscribe(filters => {
       if(filters.length != 0){
-        console.log('filters: ', filters);
+        this.isInit = false;
         this.items = [];
         this.items = filters;
       }
-      
     });
   }
 
