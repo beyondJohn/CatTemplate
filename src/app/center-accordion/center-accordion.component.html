@@ -1,4 +1,4 @@
-<mat-accordion>
+<mat-accordion [multi]="true">
   <div *ngFor="let item of items">
     <div *ngIf="item.active || isInit">
     <mat-expansion-panel>

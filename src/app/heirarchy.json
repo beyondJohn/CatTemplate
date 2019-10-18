@@ -1,0 +1,44 @@
+{
+    "Could be Automated": [
+        {
+            "tool": "AAF/CADI",
+            "tool array": [
+                {
+                    "name": "ASPR-0091: Access Controal Measures",
+                    "control standards": [
+                        {
+                            "type": "discrete control",
+                            "id": "ASPR-0091.i",
+                            "description": "this is the description of this rule, it's awesome!"
+                        },
+                        {
+                            "type": "discrete control",
+                            "id": "ASPR-0091.2",
+                            "description": "this is the 2nd description of this rule, it's awesome!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "tool": "AAF/CADI2",
+            "tool array": [
+                {
+                    "name": "ASPR-0092: Another Control Measures",
+                    "control standards": [
+                        {
+                            "type": "discrete control",
+                            "id": "ASPR-0092.1",
+                            "description": "this is the description of this rule, it's awesome!"
+                        },
+                        {
+                            "type": "discrete control",
+                            "id": "ASPR-0092.2",
+                            "description": "this is the 2nd description of this rule, it's awesome!"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
