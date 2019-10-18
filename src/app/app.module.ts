@@ -15,6 +15,7 @@ import { DataService } from './services/data.service';
 import { Item } from './classes/item';
 import { CategoryObject } from './classes/category-object';
 import { FiltersService } from './services/filters.service';
+import { LeftColumnComponent } from './left-column/left-column.component';
 
 const material = [MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule
   , MatExpansionModule, MatTreeModule, MatIconModule, MatProgressBarModule ];
@@ -25,7 +26,8 @@ const material = [MatButtonModule, MatFormFieldModule, MatInputModule, MatRipple
     CenterAccordionComponent,
     LeftTreeComponent,
     RightColumnComponent,
-    FiltersComponent
+    FiltersComponent,
+    LeftColumnComponent
   ],
   imports: [
     BrowserModule,

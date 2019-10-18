@@ -29,6 +29,17 @@ export class CenterAccordionComponent implements OnInit {
         this.isInit = false;
         this.items = [];
         this.items = filters;
+        let anyActive = false;
+        this._filterService.categoriesObjArray.forEach(category => {
+          console.log('category: ',category);
+          if(category['active']){
+            anyActive = true;
+          }
+          if(!anyActive){
+            this.isInit = true;
+          }
+        });
+        
       }
     });
   }

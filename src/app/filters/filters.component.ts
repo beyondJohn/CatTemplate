@@ -12,8 +12,8 @@ import { FiltersService } from '../services/filters.service';
 
 export class FiltersComponent implements OnInit {
   items: Array<Item> = [];
-  categories: Array<String>;
-  myJson: Array<Object>;
+  categories: Array<string>;
+  myJson: Array<object>;
 
   constructor(
     private _data: DataService
@@ -42,7 +42,7 @@ export class FiltersComponent implements OnInit {
   }
   changeCategory(category) {
     let filterItems: Array<Item> = [];
-    let categoryActive:Boolean;
+    let categoryActive:boolean;
     let tempCategoriesObjArray = this._filtersService.categoriesObjArray;
     tempCategoriesObjArray.forEach(categoryObject => {
       if (category.toLowerCase() === categoryObject['name']) {

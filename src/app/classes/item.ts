@@ -1,12 +1,12 @@
 export class Item {
-    category: String;
-    type: String;
-    name: String;
-    mfg: String;
-    price: Number;
-    active: Boolean;
-    id: Number;
-    constructor(type: String, name: String, price: Number, mfg: String, category: String, active: Boolean, id: Number) {
+    category: string;
+    type: string;
+    name: string;
+    mfg: string;
+    price: number;
+    active: boolean;
+    id: number;
+    constructor(type: string, name: string, price: number, mfg: string, category: string, active: boolean, id: number) {
         this.category = category;
         this.type = type;
         this.name = name;

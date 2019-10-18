@@ -1,10 +1,10 @@
 {
-    "Could be Automated": [
+    "Could be Automated Tools": [
         {
-            "tool": "AAF/CADI",
+            "tool name": "AAF/CADI",
             "tool array": [
                 {
-                    "name": "ASPR-0091: Access Controal Measures",
+                    "control name": "ASPR-0091: Access Controal Measures",
                     "control standards": [
                         {
                             "type": "discrete control",
@@ -21,10 +21,10 @@
             ]
         },
         {
-            "tool": "AAF/CADI2",
+            "tool name": "AAF/CADI2",
             "tool array": [
                 {
-                    "name": "ASPR-0092: Another Control Measures",
+                    "control name": "ASPR-0092: Another Control Measures",
                     "control standards": [
                         {
                             "type": "discrete control",

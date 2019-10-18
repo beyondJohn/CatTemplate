@@ -11,7 +11,7 @@ import { DataService } from './data.service';
 })
 
 export class FiltersService {
-  categories: Array<String> = [];
+  categories: Array<string> = [];
   categoriesObjArray:Array<Object> = [];
   constructor(
     private data: DataService

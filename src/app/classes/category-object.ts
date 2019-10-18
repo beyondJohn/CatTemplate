@@ -1,8 +1,8 @@
-export class CategoryObject{
-    name:String;
-    active:Boolean;
-    constructor(name:String, active:Boolean){
-      this.active = active;
-      this.name =name;
+export class CategoryObject {
+    name: string;
+    active: boolean;
+    constructor(name: string, active: boolean) {
+        this.active = active;
+        this.name = name;
     }
-  }
+}
