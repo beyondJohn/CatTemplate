@@ -20,27 +20,59 @@ export class CenterAccordionComponent implements OnInit {
   }
 
   ngOnInit() {
+    // build items array from json object
     this.myJson.forEach(item => {
       let tempItem = new Item(item['type'], item['name'], item['price'], item['mfg'], item['category'], item['active'], item['id']);
       this.items.push(tempItem);
     });
     this._filterService.filterBehaviorSubject.subscribe(filters => {
-      if(filters.length != 0){
+      console.log(filters);
+      if (filters.length != 0) {
         this.isInit = false;
         this.items = [];
         this.items = filters;
         let anyActive = false;
         this._filterService.categoriesObjArray.forEach(category => {
-          console.log('category: ',category);
-          if(category['active']){
+          if (category['active']) {
             anyActive = true;
           }
-          if(!anyActive){
-            this.isInit = true;
-          }
+          !anyActive ? this.isInit = true : this.isInit = false;
         });
-        
       }
+      let anyActiveItems = false;
+      filters.forEach(filter => {
+        if (filter.active) {
+          anyActiveItems = true;
+        }
+      });
+      anyActiveItems ? this.isInit = false : this.isInit = true;
+      
+      // check each category, if any individuals items of that category type are unchecked,
+      // uncheck the main category
+      let categoriesObjArray = this._filterService.categoriesObjArray;
+      categoriesObjArray.forEach(category => {
+        let anyActive = false;
+        this.items.forEach(item => {
+          if (item.category.toLowerCase() === category['name'].toLowerCase()) {
+            console.log('item.active: ', item.active);
+            if (item.active) { anyActive = true; } else {
+              anyActive = false;
+              if (!this.isInit) {
+                let myCheckBox = document.getElementById(category['name'].toLowerCase()) as HTMLInputElement;
+                myCheckBox.checked = false;
+                let tempCategoriesObjArray = this._filterService.categoriesObjArray;
+                tempCategoriesObjArray.forEach(categoryObject => {
+                  if (item.category.toLowerCase() === categoryObject['name']) {
+                    categoryObject['active'] = !categoryObject['active'];
+                    
+                  }
+                });
+                this._filterService.updateCategoryObject(tempCategoriesObjArray);
+              }
+            }
+          }
+        })
+      });
     });
   }
 
